@@ -8,7 +8,7 @@ Ao iniciar, ele abre uma janela gráfica perguntando qual **modo do dia** você 
 
 ## ✨ O que o W2 Core faz
 
-- Abre uma **janela gráfica limpa** ao iniciar, sem bordas e sem botões de fechar/minimizar.
+- Abre uma **janela gráfica limpa** ao iniciar.
 - Permite selecionar o **modo do dia**: Trabalho, Estudo ou Pessoal.
 - Executa scripts externos ou comandos específicos para cada modo:
   - **Trabalho**: executa `/core/trabalho.py` e depois `run-studioalpha`.
