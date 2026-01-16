@@ -1,5 +1,6 @@
 import subprocess
 import os
+import subprocess
 from ui.window import W2CoreWindow
 
 app = W2CoreWindow()
@@ -9,7 +10,9 @@ mode = app.selected_mode
 
 if mode == "trabalho":
     print("Executando modo trabalho")
-    subprocess.Popen(["python3", os.path.expanduser("~/.local/w2core/core/trabalho.py")])
+    subprocess.Popen(
+        ["python3", os.path.expanduser("~/.local/w2core/core/trabalho.py")]
+    )
 
 elif mode == "estudo":
     print("Executando modo estudo")

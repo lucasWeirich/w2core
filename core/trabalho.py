@@ -1,29 +1,20 @@
 import subprocess
 import time
-import sys
 import os
 
-def run():
+def run_trabalho():
     print("Modo TRABALHO iniciado")
 
-    # Caminho para o sopro
-    sopro_path = os.path.expanduser("~/.local/bin/sopro")
-
-    try:
-        # Abre o sopro
-        subprocess.Popen([sopro_path])
-        print("Sopro aberto")
-    except FileNotFoundError:
-        print("Erro: comando 'sopro' não encontrado")
-        return
+    # Abre o Sopro
+    subprocess.Popen(["python3", os.path.expanduser("~/.local/sopro/app/main.py")])
+    print("Sopro aberto")
 
     # Aguarda 5 segundos
-    print("Aguardando 5 segundos...")
-    time.sleep(5)
+    time.sleep(6)
 
-    # Executa o comando final
-    try:
-        subprocess.Popen(["run-studioalpha"])
-        print("run-studioalpha executado")
-    except FileNotFoundError:
-        print("Erro: comando 'run-studioalpha' não encontrado")
+    # Executa run-studioalpha como se fosse no terminal
+    subprocess.run("run-studioalpha", shell=True, executable="/bin/bash")
+    print("run-studioalpha executado")
+
+if __name__ == "__main__":
+    run_trabalho()
